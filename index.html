@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Open-Set 3D Semantic Instance Maps for Vision Language Navigation -- O3D-SIM">
+  <meta name="keywords" content="Open-Set, 3D reconstruction, VLN, sam, clip, dino">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-Set 3D Semantic Instance Maps for Vision Language Navigation -- O3D-SIM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><u>O</u>pen-Set <u>3D</u> <u>S</u>emantic <u>I</u>nstance <u>M</u>aps for Vision Language Navigation -- O3D-SIM</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              Laksh Nanwani<sup>1</sup>,</span>
+            <span class="author-block">
+              Kumaraditya Gupta<sup>1*</sup>,</span>
+            <span class="author-block">
+              Aditya Mathur<sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              Swayam Agrawal<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              A.H. Abdul Hafez<sup>2</sup>,
+            </span>
+            <span class="author-block">
+             K. Madhava Krishna<sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Robotics Research Center, IIIT Hyderabad, India;</span>
+            <span class="author-block"><sup>2</sup>Hasan Kalyoncu University, Turkey</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>These authors contributed equally to this work</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.17922"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (1st draft)</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtube.com/playlist?list=PLRcyZvOIJrHVVCjlH4XDrURjBhmfGEoKI&si=7LmSaW00QBpgeTdz"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Videos</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Smart-Wheelchair-RRC/o3d-sim"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><b>Note</b> - Accepted for Publication at the journal 
+              <a href="https://www.tandfonline.com/journals/tadr20" target="_blank">Advanced Robotics</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="teaser.png" alt="O3D-SIM Teaser">
+    </img>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Teaser
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humans excel at forming mental maps of their surroundings, equipping them to 
+            understand object relationships and navigate based on language queries. Our previous
+            work <a href="https://ieeexplore.ieee.org/abstract/document/10309534/" target="_blank">SI Maps</a> 
+            showed that having instance-level information and the semantic 
+            understanding of an environment helps significantly improve performance for language-guided 
+            tasks. We extend this instance-level approach to 3D while increasing the pipeline’s 
+            robustness and improving quantitative and qualitative results. Our method leverages 
+            foundational models for object recognition, image segmentation,and feature extraction. 
+            We propose a representation that results in a 3D point cloud
+            map with instance-level embeddings, which bring in the semantic understanding that
+            natural language commands can query. Quantitatively, the work improves upon the
+            success rate of language-guided tasks. At the same time, we qualitatively observe
+            the ability to identify instances more clearly and leverage the foundational models
+            and language and image-aligned embeddings to identify objects that, otherwise, a
+            closed-set approach wouldn’t be able to identify.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Language Navigation Demo 1</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/YWlTHtL3vBQ?si=hX08XswxsAKIsYqs" title="O3D-SIM Demo 1" frameborder="0" 
+          allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">Language Navigation Demo 2</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/6vhgCsVpe3M?si=FRw5zqIbRZ3nmUeN" title="O3D-SIM Demo 2" frameborder="0" 
+            allow="autoplay; encrypted-media;"  allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">Language Navigation Demo 3</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/EvRYYxe_TjQ?si=BcjTyOr_fRkpVBmg"  title="O3D-SIM Demo 3" frameborder="0" 
+            allow="autoplay; encrypted-media;"  allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+  
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Examples of Unique Objects Identified by Our Representation - O3D-SIM</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/PfLf9pqqaIs?si=TlD7nBOZwu9Avq_n" title="Unique Objects" frameborder="0" 
+            allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{nanwani2024openset3dsemanticinstance,
+      title={Open-Set 3D Semantic Instance Maps for Vision Language Navigation -- O3D-SIM}, 
+      author={Laksh Nanwani and Kumaraditya Gupta and Aditya Mathur and Swayam Agrawal and A. H. Abdul Hafez and K. Madhava Krishna},
+      year={2024},
+      eprint={2404.17922},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2404.17922}, 
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
