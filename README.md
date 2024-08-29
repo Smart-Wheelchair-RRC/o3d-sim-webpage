@@ -18,14 +18,13 @@ A.H. Abdul Hafez<sup>2</sup>,&nbsp;&nbsp;&nbsp;K. Madhava Krishna<sup>1</sup>
 
 <h2 class="title is-3">BibTeX</h2>
           <pre><code>
-@misc{nanwani2024openset3dsemanticinstance,
-      title={Open-Set 3D Semantic Instance Maps for Vision Language Navigation -- O3D-SIM}, 
-      author={Laksh Nanwani and Kumaraditya Gupta and Aditya Mathur and Swayam Agrawal and A. H. Abdul Hafez and K. Madhava Krishna},
-      year={2024},
-      eprint={2404.17922},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2404.17922}, 
+@article{doi:10.1080/01691864.2024.2395926,
+author = {Nanwani,Laksh and Gupta,Kumaraditya and Mathur,Aditya and Agrawal,Swayam and Abdul Hafez,A.H. and Krishna,K. Madhava},
+title = {Open-Set 3D Semantic Instance Maps for Vision Language Navigation - O3D-SIM},
+journal = {Advanced Robotics},
+year = {2024},
+doi = {10.1080/01691864.2024.2395926},
+
 }</code></pre>
     </div>
   </div>
